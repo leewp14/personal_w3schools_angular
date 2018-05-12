@@ -27,16 +27,19 @@
 First Name: <input type="text" data-ng-model="firstName"><br>
 Last Name: <input type="text" data-ng-model="lastName"><br>
 <br>
-Full Name: {{firstName + " " + lastName}}<br>
+Full Name: {{test2 + " " + lastName}}<br>
 
-Test Input : <div id="testInput">test</div>
+Test Input : <input type="text" data-ng-model="test2">
 
 </div>
 
 <script>
+  //AngularJS modules define applications:
   var app = angular.module('banglaApp', []);
+
+  //AngularJS controllers control applications:
   app.controller('banglaCtrl', function($scope) {
-      $scope.lastName=document.getElementById('testInput').innerHTML;
+      $scope.lastName='bangla';
   });
 </script>
 

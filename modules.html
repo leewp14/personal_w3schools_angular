@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body data-ng-app="bangla" data-ng-controller="ctl01">
+
+<!-- <div ng-app="bangla" directive01-Test></div> -->
+<directive01-Test></directive01-Test>
+<directive01-Test></directive01-Test>
+<directive01-Test></directive01-Test>
+<div directive01-Test data-ng-controller="ctl01">
+</div>
+
+<!-- <div data-ng-app="bangla">
+    <directive01-Test></directive01-Test>
+</div> -->
+
+<script> 
+var app = angular.module("bangla", []);
+
+app.directive("directive01Test", function() {
+    return {
+        restrict: 'A',
+        template : "<h1>I was made in a directive constructor!</h1><br>u bangla ni<br><h3>aduh.... kesiannya...</h3>"+':thinking:'+' {{bangla1}}',
+    };
+});
+
+app.controller('ctl01', function($scope){
+    $scope.bangla1='this is the first bangla!';
+})
+</script>
+
+</body>
+</html>

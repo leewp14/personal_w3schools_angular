@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<h1>Angular Intro</h1>
+
+<div data-ng-app="banglaApp" data-ng-controller="banglaCtrl" data-ng-init="firstName='John'">
+
+<!-- AngularJS Extends HTML -->
+  <p>Name: <input type="text" data-ng-model="name"></p>
+  <p data-ng-bind="name"></p>
+
+<!-- AngularJS Directives -->
+  <p>The name is <span data-ng-bind="firstName"></span></p>
+
+<!-- AngularJS Expressions -->
+  <p>My first expression: {{ test/10 }}</p>
+
+  <p>Name: <input type="text" data-ng-model="name"></p>
+  <p>{{name}}</p>
+  <br>
+  <p>Number: <input type="number" data-ng-model="number"></p>
+  <p>{{test=number/10}}</p>
+
+<!-- AngularJS Applications -->
+First Name: <input type="text" data-ng-model="firstName"><br>
+Last Name: <input type="text" data-ng-model="lastName"><br>
+<br>
+Full Name: {{test2 + " " + lastName}}<br>
+
+Test Input : <input type="text" data-ng-model="test2">
+
+</div>
+
+<script>
+  //AngularJS modules define applications:
+  var app = angular.module('banglaApp', []);
+
+  //AngularJS controllers control applications:
+  app.controller('banglaCtrl', function($scope) {
+      $scope.lastName='bangla';
+  });
+</script>
+
+</body>
+</html>
